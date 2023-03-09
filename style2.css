@@ -1,0 +1,232 @@
+*{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    text-decoration: none;
+    /* tudo dentro da caixa */
+    box-sizing: border-box;
+}
+
+/*
+======================================
+Estilização header
+======================================
+*/
+
+header{
+    /*pode manipular todos os filhos desse container com novas propriedades*/
+    display: flex;
+    /* deixar as coisas no centro da horizontal  */
+    align-items: center;
+    justify-content: space-between;
+    padding: 5px 20px;
+    border-bottom: 2px solid #0C1646;
+}
+
+.nome{
+    color: #0C1646;
+    font-size: 28px;
+    
+}
+
+header .logo{
+    width: 80px;
+    
+}
+
+.navegacao ul{
+    display: flex;
+    align-items: center;
+    /* espaco entre os links  */
+    gap: 20px;
+    margin-right: 20px; 
+}
+
+.navegacao ul li a{
+    color: #0C1646;
+    font-size: 18px;
+    border-bottom: 1px solid transparent;
+    transition: all .6s;
+}
+
+.navegacao ul li a:hover{
+border-bottom: 1px solid #0C1646;
+}
+
+.singUp{
+    width: 30px;
+    height: 30px;
+    align-items: center;
+}
+
+/*
+======================================
+Estilização cadastro
+======================================
+*/
+
+/*teste*/
+.login{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 500px;
+    padding: 40px;
+    border-radius: 10px;
+}
+
+.login h3{
+    /*margem de baixo para cima*/
+    margin-bottom: 30px;
+    /*tamanho da fonte*/
+    font-size: 27px;
+    text-align: center;
+    color: #0C1646;
+    padding: 10px;
+    border-radius: 10px;
+}
+
+.login .box-user{
+    position: relative;
+    /*para nao sair de dentro da div*/
+}
+
+.login .box-user input{
+    /*modificar os inputs dentro de ambas as classes*/
+    width: 100%;
+    /*tirar o contorno de dentro do input quando clicar nele*/
+    outline: none;
+    /*ainda fica uma pequena bordar
+    vou tirar tb*/
+    border: 0;
+    padding: 8px 0;
+    /*deixar transparente*/
+    background: transparent;
+    /*borda somente baixo*/
+    border-bottom: 1px solid #0C1646;
+    color: #0C1646;
+    /*tamanho da fonte*/
+    font-size: 14px;
+    /*afastamento de baixo*/
+    margin-bottom: 20px;
+}
+
+.login .box-user label{
+    position: absolute;
+    top: 0;
+    left: 0;
+    padding: 10px 0;
+    /*nao deixa mais tocar nele, ele so ta ali, nem da pra copiar
+    para poder clicar no input sem tocar no label*/
+    pointer-events: none;
+    color: #0C1646;
+    font-size: 16px;
+    transition: .5s;
+}
+
+/*seleciono as classes e digo, na primeira linha:
+quando o input estiver focado, o label deve fazer o que estiver abaixo
+na segunda linha: quando o input estiver preenchido, o label deve fazer o que estiver abaixo
+*/
+.login .box-user input:focus~label,
+.login .box-user input:valid~label{
+    top: -20px;
+    left: 0;
+    color: #080e2e;
+    font-size: 12px;
+}
+
+.forget{
+    font-size: 14px;
+    color: #0c1646;
+    /*joga tudo para a direita*/
+    float: right;
+    margin-right: 20px;
+    
+    
+
+}
+
+.enviar input{
+    padding: 5px 5px;
+    background: transparent;
+    outline: none;
+    border: 0;
+    border-left: 1px solid #0C1646;
+    border-bottom: 1px solid #0C1646;
+    font-size: 15px;
+    /*espaço entre as letras*/
+    letter-spacing: 1px;
+    /*engrossar a font*/
+    font-weight: 600;
+    margin-top: 20px;
+    color: #0C1646;
+}
+
+.enviar input:hover{
+    background-color: aqua;
+    color: black;
+    border-radius: 3px;
+    border-left: none;
+    border-bottom: none;
+
+}
+
+/*
+==========
+estilizando o index
+==========
+*/
+
+.entrada{
+text-align: center;
+font-size: 23px;
+}
+.entrada p{
+    color: #fff;
+    background-color: #16246d;
+    padding: 10px 20px;
+}
+
+.imgIndex{
+   height: 500px;
+   width: 100%;
+   opacity: 70%;
+   z-index: 1;
+}
+
+.mae{
+    position: relative;
+    background-image: url(img/fundo.jpg);
+    background-repeat: no-repeat;
+    background-size: 100% 100%; 
+    height: 500px;
+    display: flex;
+    margin: 0;
+    width: 100%;
+    justify-content: center;
+   
+}
+
+.mensagem{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 2;
+    text-align: center;    
+}
+
+.mensagem h1{
+    color: #fff;
+    font-size: 40px;
+
+}
+
+
+
+
+
+
+
